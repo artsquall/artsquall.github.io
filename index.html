@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Renzo Carlos">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="reset.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+
+	<title>artsquall</title>
+</head>
+<body>
+	<main>
+		<div class="menu">
+			<h1>artsquall</h1>
+			<div class="form">
+				<label for="formHexCode">Color Hex</label><br>
+				<input type="text" id="formHexCode" name="formHexCode" placeholder="#319c8a" maxlength="7" value="#319c8a"><br>
+				
+				<label for="formSize">Size</label>
+				<input type="number" id="formSize" name="formSize" min="2" max="11" placeholder="11" value="11"><br>
+
+				<h2>Shade</h2>
+				<label for="formHueIncr">Hue+</label>
+				<input type="number" id="formHueIncr" name="formHueIncr" min="0" max="400" placeholder="10" value="10"><br>
+
+				<label for="formSatIncr">Sat+</label>
+				<input type="number" id="formSatIncr" name="formSatIncr" min="0" max="400" placeholder="5" value="5"><br>
+
+				<label for="formValDecr">Val-</label>
+				<input type="number" id="formValDecr" name="formValDecr" min="0" max="400" placeholder="5" value="5"><br>
+
+
+				<h2>Tint</h2>
+				<label for="formHueDecr">Hue-</label>
+				<input type="number" id="formHueDecr" name="formHueDecr" min="0" max="400" placeholder="10" value="10"><br>
+
+				<label for="formSatDecr">Sat-</label>
+				<input type="number" id="formSatDecr" name="formSatDecr" min="0" max="400" placeholder="5" value="5"><br>
+
+				<label for="formValIncr">Val+</label>
+				<input type="number" id="formValIncr" name="formValIncr" min="0" max="400" placeholder="5" value="5"><br>
+
+				<br>
+				<button onclick="generatePalette()">Generate Palette</button>
+			</div>
+		</div>
+
+		<div class="table"></div>
+	</main>
+
+	<script src="color.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
